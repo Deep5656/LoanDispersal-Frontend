@@ -1,0 +1,48 @@
+<!-- <p>update-user works!</p> -->
+<!-- <p>dashboard works!</p> -->
+
+<!-- {{userData | json}} -->
+
+<!-- {{name}} -->
+
+
+
+<!-- {{id}} -->
+<div class="container text-center mt-2">
+ <h1>Update Your Details Here</h1>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            
+            <form (ngSubmit)="updateForm()">
+                <mat-form-field class="full-width">
+                    <mat-label>Name</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="name" [(ngModel)]="userData.name" style="height: 50px;">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Age</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="age" [(ngModel)]="userData.age" style="height: 50px;">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Income</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="income" [(ngModel)]="userData.income" style="height: 50px;">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Amount</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="amount" [(ngModel)]="userData.amount" style="height: 50px;">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>User_Details</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="details" [(ngModel)]="userData.details" style="height: 50px;">
+                </mat-form-field>
+                <mat-form-field class="full-width">
+                    <mat-label>Credit History</mat-label>
+                    <input type="text" matInput placeholder="Enter Here" name="creditHistory" [(ngModel)]="userData.creditHistory" style="height: 50px;">
+                </mat-form-field>
+
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+<!-- <p>user-dashboard works!</p> -->
+
+<!-- <app-update-user [id]="userId"></app-update-user> -->
+
+<div class="container text-center mt-2">
+    <h1>Eligible User for Loan</h1>
+</div>
+
+<!-- searching -->
+<div class="container text-center">
+    <form>
+        <input class="full-width" type="text" name="searchedTxt" id="" placeholder="Search Here..." [(ngModel)]="searchedTxt">
+    </form>
+    <!-- <h1> your search value {{searchedTxt}}</h1> --> 
+</div>
+
+<!-- table of user -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 offset-md-1">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Age</th>
+                    <th scope="col">Income</th>
+                    <th scope="col">Loan Amount</th>
+                    <th scope="col">Emp Details</th>
+                    <th scope="col">Credit History</th>
+                  </tr>
+                </thead>
+                <tbody  *ngFor="let u of users;let i = index" >
+                  <tr *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">
+                    <th scope="row">{{i+1}}</th>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{ u.name }}</td>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.age}}</td>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.income}}</td>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.amount}}</td>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.details}}</td>
+                    <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.creditHistory}}</td>
+                    <td>
+                        <button class="btn btn-warning mr-2" style="margin-right: 5px;" [routerLink]="'/updateuser/'+u.id">Update</button>
+                        <button class="btn btn-danger mr-2" (click)=delete(u.id)>Delete</button>
+                    </td>
+                  </tr>
+                </tbody>
+
+              </table>
+
+        </div>
+        <button class="btn btn-primary" style="width: 200px; margin-left: 100px;" [routerLink]="'/dashboard'">Add</button>
+
+    </div>
+</div>
