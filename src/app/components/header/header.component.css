@@ -1,0 +1,37 @@
+#container{
+    background-color:black;
+    color: white;
+    height: 40px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0px;
+}
+.link{
+    text-decoration: none;
+    color: white;
+}
+
+#subcontainer{
+    display: flex;
+    margin-right: -100px;
+}
+#box1{
+    width: 100px;
+    margin-right: 100px;
+}
+
+.box2{
+    width: 100px;
+    margin-left: 10px;
+}
+marquee{
+    position: fixed;
+    top: 30px;
+}
+
+
+
+

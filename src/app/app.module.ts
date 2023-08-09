@@ -12,6 +12,7 @@ import { UpdateUserComponent } from './components/update-user/update-user.compon
 import { UserComponent } from './components/user/user.component';
 import { UserDashboardComponent } from './components/user-dashboard/user-dashboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HeaderComponent } from './components/header/header.component';
 
 
 
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     UserDashboardComponent,
     UpdateUserComponent,
-    UserComponent
+    UserComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@
 
 <!-- <app-update-user [id]="userId"></app-update-user> -->
 
-<div class="container text-center mt-2">
+<div class="container text-center mt-5">
     <h1>Eligible User for Loan</h1>
 </div>
 
@@ -40,8 +40,10 @@
                     <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.details}}</td>
                     <td *ngIf="!searchedTxt || u.name.toLowerCase().includes(searchedTxt.toLowerCase())">{{u.creditHistory}}</td>
                     <td>
-                        <button class="btn btn-warning mr-2" style="margin-right: 5px;" [routerLink]="'/updateuser/'+u.id">Update</button>
-                        <button class="btn btn-danger mr-2" (click)=delete(u.id)>Delete</button>
+                        <!-- <button class="btn btn-warning mr-2" style="margin-right: 5px;" [routerLink]="'/updateuser/'+u.id">Update</button> -->
+                        <a><img class="img" src="../../../assets/pen.png" [routerLink]="'/updateuser/'+u.id" alt=""></a>&nbsp;&nbsp;&nbsp;
+                        <a><img class="img" src="../../../assets/delete.png" (click)=delete(u.id) alt=""></a>
+                        <!-- <button class="btn btn-danger mr-2" (click)=delete(u.id)>Delete</button> -->
                     </td>
                   </tr>
                 </tbody>
